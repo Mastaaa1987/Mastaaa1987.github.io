@@ -1,0 +1,21 @@
+{
+  "name": "mobile-bridge",
+  "private": false,
+  "version": "0.0.1",
+  "description": "Test",
+  "repository": "https://github.com/gr82bu/mobile-bridge",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-filerev": "~2.1.0",
+    "grunt-usemin": "~2.4.0",
+    "grunt-angular-templates": "~0.5.7",
+    "grunt-contrib-copy": "~0.6.0",
+    "grunt-contrib-clean": "~0.6.0"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <style>
+            .table-view {
+                width: 70%;
+                margin: 5% auto;
+            }
+            .margin-top-15 { margin-top: 1.5em; }
+        </style>
+    </head>
+    <body ng-app="mbApp">
+
+        <div class="container-fluid" ng-controller="indexCtrl">
+            <div class="table-view">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="search" ng-model="filter.name">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row margin-top-15">
+                    <div class="col-md-12 table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr ng-init="order = 'name'; asc = false">
+                                <th style="cursor: pointer" ng-click="order = 'name'; asc = asc ? false : true">File Name <i ng-show="order == 'name'" class="fa fa-chevron-{{asc ? 'down' : 'up'}}"></i></th>
+                                <th style="cursor: pointer" ng-click="order = 'type'; asc = asc ? false : true">File Type <i ng-show="order == 'type'" class="fa fa-chevron-{{asc ? 'down' : 'up'}}"></i></th>
+                                <th style="cursor: pointer" ng-click="order = 'data.length'; asc = asc ? false : true">Size (Kb) <i ng-show="order == 'data.length'" class="fa fa-chevron-{{asc ? 'down' : 'up'}}"></i></th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="animate-repeat" ng-repeat="file in files | filter:filter | orderBy:order:asc">
+                                <td>{{ file.name }}</td>
+                                <td>{{ file.type }}</td>
+                                <td>{{ fileSize(file) | number }}</td>
+                                <td>
+                                    <div class="action">
+                                        <a href="javascript:" ng-click="bookmark(file)"><i class="fa fa-star" ng-style="{color: file.bookmarked ? 'darkorange' : 'darkgrey'}"></i></a>
+                                        <button type="button" class="btn btn-default btn-sm" ng-click="download(file)"><i class="fa fa-download"></i> Download</button>
+                                        <button type="button" class="btn btn-default btn-sm" ng-click="preview(file)" ng-if="file.type!=='text'"><i class="fa fa-eye"></i> Preview</button>
+                                        <button type="button" class="btn btn-default btn-sm" ng-click="edit(file)" ng-if="file.type!=='image'"><i class="fa fa-edit"></i> Edit</button>
+                                        <!--Select file by clicking the row-->
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row margin-top-15">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-default" ng-class="{active: !filter.bookmarked}" ng-click="filter={name: filter.name}"><i class="fa fa-list"></i> File List</button>
+                        <button type="button" class="btn btn-default" ng-class="{active: filter.bookmarked}" ng-click="filter.bookmarked=true"><i class="fa fa-bookmark"></i> Bookmarks</button>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="btn-group pull-right" dropdown is-open="status.isopen">
+                            <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
+                                <i class="fa fa-plus"></i> Create New <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-click="add('html')"><a href="#">html</a></li>
+                                <li ng-click="add('text')"><a href="#">text</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn btn-default pull-right" ng-click="upload()"><i class="fa fa-upload"></i> Upload</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/vendor/angular.min.js"></script>
+        <script src="js/vendor/ui-bootstrap.min.js"></script>
+        <script src="js/vendor/ui-bootstrap-tpls.min.js"></script>
+        <script src="js/vendor/angular-facebook.js"></script>
+        <script src="js/vendor/rangy-core.js"></script>
+        <script src="js/vendor/rangy-selectionsaverestore.js"></script>
+        <script src="js/vendor/textAngular.min.js"></script>
+        <script src="js/vendor/textAngular-sanitize.min.js"></script>
+        <script src="js/vendor/underscore-min.js"></script>
+        <script src="js/vendor/canvas-toBlob.js"></script>
+        <script src="js/vendor/FileSaver.min.js"></script>
+        <script src="js/vendor/html-docx.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/partials.js"></script>
+        <script src="js/directives/inputFileChange.js"></script>
+        <script src="js/services/fileStorage.js"></script>
+        <script src="js/controllers/indexCtrl.js"></script>
+        <script src="js/controllers/uploadCtrl.js"></script>
+        <script src="js/controllers/editCtrl.js"></script>
+    </body>
+</html>

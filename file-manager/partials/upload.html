@@ -1,0 +1,35 @@
+<div class="row" style="min-height:160px; text-align: center; padding: 30px;">
+    <div ng-if="!img.src && !fbAlbum && !fbAlbumPhotos" style="margin: 5% 0;">
+        <button class="btn btn-default" ng-click="uploadFromFb()">Upload from Facebook</button>
+        <button class="btn btn-default" ng-click="uploadFromPc()">Upload from PC</button>
+        <input type="file" style="display:none" accept="image/*" id="file" name='file' ng-model="img.src" input-file-change/>
+    </div>
+
+    <div ng-if="img.src && !fbAlbum && !fbAlbumPhotos">
+        <img id="imgPreview" ng-src="{{img.src}}" style="max-width: 500px;"/>
+    </div>
+    <div ng-if="fbAlbum">
+        <a ng-repeat="album in albums" href="javascript:" ng-click="showAlbum(album.id)" style="width: 100px; height: 100px; margin: 0 30px 40px 0; display: inline-block;">
+            <img ng-src="{{album.cover}}" style="max-width: 100px; height: 100px;"/><span style="display: inline-block; width: 100px; white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{album.name}}</span>
+        </a>
+    </div>
+    <div ng-if="fbAlbumPhotos">
+        <a ng-repeat="photo in photos" href="javascript:" ng-click="previewFbPhoto(photo.source)" style="width: 100px; height: 100px; margin: 0 30px 40px 0; display: inline-block;">
+            <img ng-src="{{photo.source}}" style="max-width: 100px; height: 100px;"/>
+        </a>
+    </div>
+    <div class="row margin-top-15">
+        <div class="col-sm-4 col-md-offset-6">
+            <div ng-if="img.src" class="input-group">
+                <input type="text" class="form-control" ng-model="img.name" placeholder="file name">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="saveImg(img)">Save</button>
+                </span>
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <button class="btn btn-default" ng-click="$dismiss()">Cancel</button>
+        </div>
+    </div>
+</div>

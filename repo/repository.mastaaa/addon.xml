@@ -1,31 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addons>
-<addon id="script.get.packages" name="MastaaaTV Installer" version="0.0.1" provider-name="Mastaaa1987.github.io">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0"/>
-    </requires>
-    <extension point="xbmc.python.script" library="main.py">
-        <provides>executable</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="de_DE">KODI-VAVOO-XSTREAM-TV-German</summary>
-        <description lang="de_DE"></description>
-        <language></language>
-        <platform>all</platform>
-        <license>unlicense</license>
-        <forum></forum>
-        <website></website>
-        <email></email>
-        <source></source>
-        <news></news>
-        <disclaimer></disclaimer>
-        <assets>
-            <icon>resources/icon.png</icon>
-            <fanart>resources/fanart.jpg</fanart>
-        </assets>
-    </extension>
-</addon>
-
 <addon id="repository.mastaaa" name="Mastaaa's Repository" provider-name="Mastaaa" version="1.0">
 	<extension point="xbmc.addon.repository" name="Mastaaa's Repository">
 		<dir>
@@ -126,7 +99,6 @@
 		<website>https://mastaaa1987.github.io</website>
 		<assets>
 			<icon>icon.png</icon>
-		</assets>
+		</assets> 
 	</extension>
 </addon>
-</addons>

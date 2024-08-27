@@ -1,7 +1,0 @@
-{
-    "packages": [ "sqlite3" ],
-    "files": {
-        "common.py": "./common.py",
-        "sql.py": "./sql.py"
-    }
-}

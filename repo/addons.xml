@@ -45,7 +45,7 @@
 		<assets>
 			<icon>icon.png</icon>
 		</assets>
-		<news> 2024.08.28 - EPG Service layer hinzugefügt: Magenta TV, TVSpielfilme. Und als Plot Info eingefügt in VAVOO. Sowie in der Deutschen Liste, Streams neu bennant und neu Gruppiert um die Liste kürzer zu halten ...</news>
+		<news> 2024.08.28 - EPG Service layer hinzugefügt: Magenta TV, TVSpielfilme. und als Plot Info eingefügt in VAVOO. Sowie in der Deutschen Liste, Streams neu bennant und neu Gruppiert um die Liste kürzer zu halten. </news>
 	</extension>
 </addon>
 <addon id="script.module.vavoo" name="Vavoosign" version="0.1.3.2" provider-name="michaz1988">

@@ -25,12 +25,12 @@
         </assets>
     </extension>
 </addon>
-<addon id="plugin.video.vavooto" name="VAVOO.TO" version="6.0.3.1-1" provider-name="mastaaa,kasi,michaz">
+<addon id="plugin.video.vavooto" name="VAVOO.TO" version="6.0.3.2-1" provider-name="kasi,michaz edit by Mastaaa">
     <requires>
         <import addon="script.module.vavoo" version="0.1.3.2" />
         <import addon="script.module.requests"/>
         <import addon="script.module.resolveurl"/>
-        <import addon="inputstream.ffmpegdirect" optional="true" /> 
+        <import addon="inputstream.ffmpegdirect" optional="true" />
         <import addon="script.module.futures" optional="true" />
         <import addon="script.module.infotagger" optional="true" />
         <!-- only for debug -->
@@ -45,8 +45,8 @@
         <assets>
             <icon>icon.png</icon>
         </assets>
+        <news> 2024.08.28 - EPG Service layer hinzugefügt (Provider: Magenta TV, TVSpielfilme) & als Plot Info eingefügt in VAVOO. Sowie (Deutsche Liste!) Streams neu bennant & neu Gruppiert um die Liste kürzer zu halten ...</news>
     </extension>
-    <news></news>
 </addon>
 <addon id="script.module.vavoo" name="Vavoosign" version="0.1.3.2" provider-name="michaz1988">
     <requires>
@@ -59,7 +59,7 @@
         </assets>
     </extension>
 </addon>
-<addon id="plugin.video.xstream" name="xStream" version="4.1.1-1" provider-name="xStream-Team">
+<addon id="plugin.video.xstream" name="xStream" version="4.1.1-1" provider-name="xStream-Team edit by Mastaaa">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -97,6 +97,7 @@
             <screenshot>resources/screenshot-03.jpg</screenshot>
             <screenshot>resources/screenshot-04.jpg</screenshot>
         </assets>
+        <news>Site Plugin: Serienstream geändert, um die s.to domain auf 186.2.175.5 zu ändern und somit die DNS Sperre von Vodafone usw. zu umgehen.</news>
     </extension>
 </addon>
 

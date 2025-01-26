@@ -4,19 +4,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>PyScript!</title>
-        <link
-            rel="stylesheet"
-            href="https://pyscript.net/snapshots/2024.9.2/core.css"
-        />
-        <script
-            type="module"
-            src="https://pyscript.net/snapshots/2024.9.2/core.js"
-        ></script>
+        <script type="module" src="core.js"></script>
     </head>
     <body>
-        <!-- Use MicroPython to evaluate some Python -->
-        <script type="mpy" terminal>
-            print("Hello, world!")
-        </script>
+		<button type="button" onclick="myFunction()">Click Me!</button>
+		<div id="dglow" style="display:none;">Glow</div>
     </body>
 </html>

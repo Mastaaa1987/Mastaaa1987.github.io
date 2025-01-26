@@ -4,7 +4,20 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>PyScript!</title>
-        <script type="module" src="core.js"></script>
+        <script type="module">
+			var dglow=document.getElementById("dglow");
+
+			function myFunction(){
+				var style=dglow.style.display;
+					if(style=='block')
+						{
+						dglow.style.display='none';
+						}
+					else{
+						dglow.style.display='block';
+						}    			
+				}
+		</script>
     </head>
     <body>
 		<button type="button" onclick="myFunction()">Click Me!</button>

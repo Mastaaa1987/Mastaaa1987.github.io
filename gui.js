@@ -50,7 +50,7 @@ const sqlSnippets = {
 };
 
 // Start the worker in which sql.js will run
-const worker = new Worker("../../dist/worker.sql-wasm.js");
+const worker = new Worker("../../worker.sql-wasm.js");
 worker.onerror = handleError;
 
 // Open a database

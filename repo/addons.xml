@@ -25,21 +25,19 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="plugin.video.vavooto" name="VAVOO.TO" version="6.0.3.2-1" provider-name="kasi,michaz edit by Mastaaa">
+<addon id="plugin.video.vavooto" name="VAVOO.TO" version="2025.08.24-1" provider-name="kasi,michaz edit by Mastaaa">
 	<requires>
-		<import addon="script.module.vavoo" version="0.1.3.2" />
 		<import addon="script.module.requests"/>
 		<import addon="script.module.resolveurl"/>
-		<import addon="inputstream.ffmpegdirect" optional="true" />
-		<import addon="script.module.futures" optional="true" />
-		<import addon="script.module.infotagger" optional="true" />
-		<!-- only for debug -->
-		<import addon="script.module.pydevd" optional="true"/>
+		<import addon="script.module.dateutil"/>
+		<import addon="inputstream.adaptive"/>
+		<import addon="inputstream.ffmpegdirect"/>
+		<import addon="script.module.infotagger"/>
 	</requires>
-	<extension point="xbmc.python.pluginsource" library="main.py">
+	<extension point="xbmc.python.pluginsource" library="resources/main.py">
 		<provides>video</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" /> <!-- added by mastaaa -->
+	<extension point="xbmc.service" library="resources/service.py" start="startup" /> <!-- added by mastaaa -->
 	<extension point="xbmc.python.module" library="resources" />
 	<extension point="xbmc.addon.metadata">
 		<assets>

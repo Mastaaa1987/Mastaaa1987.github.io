@@ -55,25 +55,25 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="plugin.video.xstream" name="xStream" version="4.1.1-1" provider-name="xStream-Team edit by Mastaaa">
+<addon id="plugin.video.xstream" name="xStream" version="2026.02.11-2" provider-name="Michaz edit by Mastaaa">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
-		<import addon="script.module.resolveurl" version="5.1.67"/>
+		<import addon="script.module.resolveurl" version="5.1.173"/>
 		<import addon="script.module.six" version="1.11.0"/>
-		<import addon="repository.xstream" version="1.2.2"/>
+		<import addon="script.module.pyaes"/>
 		<import addon="repository.resolveurl" optional="true"/>
 		<import addon="script.module.inputstreamhelper" version="0.3.3" optional="true"/>
-		<import addon="script.module.web-pdb" version="1.5.6" optional="true"/>
 		<import addon="script.module.pydevd" optional="true" />
+		<import addon="script.module.web-pdb" optional="true" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
-		<summary lang="de">xStream: Das Original</summary>
-		<summary lang="en_GB">xStream: The Original</summary>
+		<summary lang="de">xStream</summary>
+		<summary lang="en_GB">xStream</summary>
 		<description lang="de">xStream ist ein Video-Addon für Kodi. xStream dient als Suchmaschine für Filme und Serien auf verschiedenen Webseiten.</description>
 		<description lang="en_GB">xStream is a video add-on for Kodi. xStream serves as a search engine for films and series on various websites.</description>
 		<disclaimer lang="de">Sie können dieses Video Addon gerne verwenden. Der bereitgestellte Inhalt der Webseiten steht in keinem Bezug zu xStream oder den Entwicklern! Weitere Informationen finden Sie in unserer Wiki und FaQ.</disclaimer>
@@ -81,19 +81,12 @@
 		<language>de en</language>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</license>
-		<website>https://streamxstream.github.io/xStreamRepoWeb/</website>
-		<source>https://github.com/streamxstream</source>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 			<banner>resources/banner.png</banner>
 			<clearlogo>resources/clearlogo.png</clearlogo>
-			<screenshot>resources/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshot-03.jpg</screenshot>
-			<screenshot>resources/screenshot-04.jpg</screenshot>
 		</assets>
-		<news>Site Plugin: Serienstream geändert, um die s.to domain auf 186.2.175.5 zu ändern und somit die DNS Sperre von Vodafone usw. zu umgehen.</news>
 	</extension>
 </addon>
 

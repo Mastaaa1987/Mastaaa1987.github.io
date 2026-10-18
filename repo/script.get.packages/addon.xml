@@ -1,4 +1,4 @@
-<addon id="script.get.packages" name="MastaaaTV Installer" version="0.0.1" provider-name="Mastaaa1987.github.io">
+<addon id="script.get.packages" name="MastaaaTV Installer" version="0.3.0" provider-name="Mastaaa1987.github.io">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
@@ -6,7 +6,7 @@
         <provides>executable</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="de_DE">KODI-VAVOO-XSTREAM-TV-German</summary>
+        <summary lang="de_DE">MastaaaTV Installer</summary>
         <description lang="de_DE"></description>
         <language></language>
         <platform>all</platform>
